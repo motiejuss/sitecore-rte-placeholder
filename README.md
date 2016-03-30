@@ -14,3 +14,6 @@ This is a Rich Text Editor (Telerik RadEditor) plugin for loading external conte
 ### Files
 - Open Website\Editor\InsertAccordion\InsertAccordion.xml and set "DialogFolderDataContext" to point to your Accordions folder.
 - See Website\Views\sample view.cshtml on how to use the component.
+
+### Preview
+![Preview](http://kunder.cabana.dk/frontend/sitecore-rte-placeholder/preview.gif)
