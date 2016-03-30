@@ -9,4 +9,8 @@ This is a Rich Text Editor (Telerik RadEditor) plugin for loading external conte
 
 ### Sitecore Master
 - Install "Accordion Data Templates.zip"
-- Create your accordions somewhere in your Global content folder
+- Create Accordions folder somewhere in your Global content and create some sample accordion
+
+### Files
+- Open Website\Editor\InsertAccordion\InsertAccordion.xml and set "DialogFolderDataContext" to point to your Accordions folder.
+- See Website\Views\sample view.cshtml on how to use the component.
