@@ -258,6 +258,12 @@ Website/Global.asax
 Website/webedit.css
 
 #Sitecore Ignores
+!Data/
+Data/*
+!Data/packages/
+Data/packages/*
+!Data/packages/Accordion Data Templates.xml
+!Data/packages/Accordion Data Templates-1.0.zip
 !Website/App_Config/
 Website/App_Config/*
 !Website/App_Config/Include/

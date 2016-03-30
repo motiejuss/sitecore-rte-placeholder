@@ -1,0 +1,52 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Accordion Data Templates</PackageName>
+      <Author>Motiejus bagdonas</Author>
+      <Version>1.0</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme />
+      <Publisher />
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/Data Templates/{8705005E-E618-40DF-87C8-F97F016A7C47}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Templates/AccordionBox/__Standard Values/{166A18F6-D87A-428F-90C4-24567B7FA420}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Templates/AccordionBox/{5EBA5AA6-CCF1-413F-ABC6-9177871317AA}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Templates/AccordionBox/Data/{9AC2B23C-ACEA-47CD-8E47-9B7F0B9C7F45}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Templates/AccordionBox/Data/Headline/{FB4FF5AE-EBCD-4D2C-9B19-F431B44264F5}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Templates/AccordionSegment/__Standard Values/{0B949107-4DF1-4D18-9558-8172ED4A2488}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Templates/AccordionSegment/{BF276C1C-7245-45B3-B806-3D2CF51152A2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Templates/AccordionSegment/Data/{48F04801-2B95-4821-8DED-2D0C737CFE0C}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Templates/AccordionSegment/Data/IsOpen/{005C8E30-B490-4828-A594-FE4FA4DFEDC8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Templates/AccordionSegment/Data/Text/{7ECBE276-2126-43F6-A389-0C32ED200EEF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Data Templates/AccordionSegment/Data/Title/{B62DAA20-AF1F-439E-BF5E-EAEBA67E9703}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Accordion Data Templates</Name>
+    </xitems>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>
