@@ -1,0 +1,20 @@
+﻿@using Editor
+<h1 class="contentTitle">
+    @Html.Sitecore().Field("Title")
+</h1>
+<div class="contentDescription">    
+    @{
+        if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
+        {
+            <link href="~/Editor/InsertAccordion/editor-control.css" rel="stylesheet" />      
+            @Html.Sitecore().Field("Text")
+        }
+        else
+        {
+            <link href="~/resources/accordion/style.css" rel="stylesheet" />
+            <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
+            <script src="~/resources/accordion/script.js"></script>
+            @Html.Raw(EditorComponents.RenderArticleBody(Sitecore.Context.Item.Fields["Text"].Value.ToString()))
+        }
+    }    
+</div>

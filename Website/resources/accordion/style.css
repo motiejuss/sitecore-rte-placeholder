@@ -1,0 +1,112 @@
+.accordion {
+  color: #001f3d;
+  background: #f5f5f5;
+  margin: 10px 0 30px 0;
+  font-family: sans-serif;
+}
+
+.accordion h4 {
+  padding: 0.9375rem 1.875rem;
+  margin: 0;
+}
+
+@media only screen and (max-width: 769px) {
+  .accordion h4 {
+    padding: 0.9375rem 1.875rem 0.9375rem 0.9375rem;
+  }
+}
+
+.accordion ul {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.accordion ul .tab {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #e7e7e7;
+}
+
+.accordion ul .tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.accordion ul .tab input:checked ~ .tab__content {
+  max-height: 800px;
+}
+
+.accordion ul .tab input:checked ~ label:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.accordion ul .tab input:checked ~ label:after {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.accordion ul .tab label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.9375rem 3.125rem 0.9375rem 1.875rem;
+  word-break: break-all;
+}
+
+@media only screen and (max-width: 769px) {
+  .accordion ul .tab label {
+    padding: 0.9375rem 2.8125rem 0.9375rem 0.9375rem;
+  }
+}
+
+.accordion ul .tab label:before,
+.accordion ul .tab label:after {
+  content: '';
+  width: 2px;
+  height: 14px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  margin-top: -7px;
+  transition: all 0.15s cubic-bezier(0.2, 0, 0.4, 1);
+}
+
+.accordion ul .tab label:after {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+
+.accordion ul .tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .25s;
+  background: white;
+}
+
+.accordion ul .tab__content p {
+  padding: 1.25rem 1.875rem;
+  margin: 0;
+  font-size: 0.875rem;
+  word-break: break-all;
+}
+
+@media only screen and (max-width: 769px) {
+  .accordion ul .tab__content p {
+    padding: 0.9375rem 0.9375rem 0.9375rem 0.9375rem;
+  }
+}

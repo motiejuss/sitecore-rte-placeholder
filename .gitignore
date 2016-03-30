@@ -234,3 +234,31 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# Sitecore Specific
+Data/
+Databases/
+Website/App_Browsers/
+Website/App_Config/
+Website/App_Data/
+Website/Areas/
+Website/Artifacts/
+Website/layouts/
+Website/sitecore/
+Website/sitecore modules/
+Website/sitecore_files/
+Website/temp/
+Website/upload/
+Website/Default.aspx
+Website/default.css
+Website/default.htm.sitedown
+Website/default.js
+Website/Global.asax
+Website/webedit.css
+
+#Sitecore Ignores
+!Website/App_Config/
+Website/App_Config/*
+!Website/App_Config/Include/
+Website/App_Config/Include/*
+!Website/App_Config/Include/Editor.config

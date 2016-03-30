@@ -1,0 +1,27 @@
+* {
+	-webkit-transform:none;
+	transform:none;
+}
+.editor-control{
+	height:340px;
+	position:relative;
+	margin-bottom:20px;
+	border:2px dashed #ccc;
+}
+.editor-control.selected {
+    border:2px dashed black;
+}
+.editor-control:after{
+	content:'';
+	position:absolute;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;		
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.editor-control-accordion:after{		
+		background-image:url("editor-control-accordion.png");
+}

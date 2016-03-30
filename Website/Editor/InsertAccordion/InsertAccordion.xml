@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <RichText.InsertAccordion>
+
+    <!-- Don't forget to set your icon <span class="wp-smiley wp-emoji wp-emoji-smile" title=":)">:)</span> -->
+    <FormDialog Icon="Business/32x32/message.png" Header="Insert Accordion" Text="Choose an item to insert." OKButton="Insert Accordion" CancelButton="false">
+
+      <!-- js reference to my InsertDialog.js script. -->
+      <!-- For some strange reason, if the period within the script tag is not present, the dialog form won't work -->
+      <script Type="text/javascript" src="/Editor/InsertAccordion/InsertAccordion.js">.</script>
+
+      <!-- Reference to my InsertDialogForm class -->
+      <CodeBeside Type="Editor.InsertAccordion.InsertAccordionForm,Website" />
+
+      <!-- Root contains the ID of /sitecore/content/Dialog Content Items -->
+      <DataContext ID="DialogFolderDataContext"  Root="{97180936-5727-4F20-87CC-59AF06A0A96B}" />
+      <GridPanel Width="100%" Height="100%" Style="table-layout:fixed">
+        <GridPanel Width="100%" Height="100%" Style="table-layout:fixed" Columns="3" GridPanel.Height="100%">
+          <Scrollbox Class="scScrollbox scFixSize" Width="100%" Height="100%" Background="white" Border="1px inset" Padding="0" GridPanel.Height="100%" GridPanel.Width="50%" GridPanel.Valign="top">
+            <TreeviewEx ID="DialogContentItems" DataContext="DialogFolderDataContext" Root="true" />
+          </Scrollbox>
+        </GridPanel>
+      </GridPanel>
+    </FormDialog>
+  </RichText.InsertAccordion>
+</control>
