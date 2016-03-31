@@ -1,5 +1,8 @@
 # sitecore-rte-placeholder
-This is a Rich Text Editor (Telerik RadEditor) plugin for loading external content into a rich text editor field.
+This is a Sitecore Rich Text Editor (Telerik RadEditor) plugin for loading external content into a rich text editor field.
+
+## Prerequisites
+This solution was tested using Sitecore 8.1 (rev. 160302) and Sitecore 7.2 (rev. 141226). Sitecore was installed using SIM (Sitecore Instance Manager) with default settings. 
 
 ## Setup
 
@@ -17,3 +20,9 @@ This is a Rich Text Editor (Telerik RadEditor) plugin for loading external conte
 
 ## Preview
 ![Preview](http://kunder.cabana.dk/frontend/sitecore-rte-placeholder/preview.gif)
+
+## TODO's
+- Optimize code
+- Make NuGet package
+- Make installable Sitecore package
+- Utilize Sitecore Habitat
