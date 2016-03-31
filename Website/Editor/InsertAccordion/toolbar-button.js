@@ -66,7 +66,7 @@
                     true,
                     Telerik.Web.UI.WindowBehaviors.Close + Telerik.Web.UI.WindowBehaviors.Move,
                     false,
-                    true
+                    false
                 );
             } else {
                 alert(safetyCheckMessage);
