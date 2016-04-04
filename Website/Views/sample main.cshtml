@@ -15,6 +15,19 @@
     <meta name="vs_defaultClientScript" content="JavaScript" />
     <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
     <link href="/default.css" rel="stylesheet" />
+
+    @{
+        if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
+        {
+            <link href="~/Editor/InsertAccordion/editor-control.css" rel="stylesheet" />
+        }
+        else
+        {
+            <link href="~/resources/accordion/style.css" rel="stylesheet" />
+            <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
+            <script src="~/resources/accordion/script.js"></script>
+        }
+    }
 </head>
 <body>
     <div id="MainPanel">
