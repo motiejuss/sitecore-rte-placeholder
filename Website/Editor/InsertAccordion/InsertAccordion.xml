@@ -3,7 +3,7 @@
   <RichText.InsertAccordion>
 
     <!-- Don't forget to set your icon <span class="wp-smiley wp-emoji wp-emoji-smile" title=":)">:)</span> -->
-    <FormDialog Icon="Business/32x32/message.png" Header="Insert Accordion" Text="Choose an item to insert." OKButton="Insert Accordion" CancelButton="false">
+    <FormDialog Icon="Business/32x32/message.png" Header="Insert Accordion" Text="Choose an item to insert." OKButton="Insert Accordion" CancelButton="true">
 
       <!-- js reference to my InsertDialog.js script. -->
       <!-- For some strange reason, if the period within the script tag is not present, the dialog form won't work -->

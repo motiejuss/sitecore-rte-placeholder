@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Sitecore.Configuration;
+using Sitecore.Xml;
+using System.Xml;
 
 namespace Editor
 {
@@ -12,8 +11,11 @@ namespace Editor
         }
         protected override void SetupStylesheets()
         {
-            this.Editor.CssFiles.Add("/Editor/normalize.css");
-            this.Editor.CssFiles.Add("/Editor/InsertAccordion/editor-control.css");
+            XmlNodeList configNodes = Factory.GetConfigNodes("clientstylesheets/htmleditor/style");
+            foreach (XmlNode node in configNodes)
+            {
+                this.Editor.CssFiles.Add(XmlUtil.GetAttribute("src", node));
+            }
             base.SetupStylesheets();
         }
     }

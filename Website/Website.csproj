@@ -43,10 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr4.StringTemplate, Version=4.0.6.9004, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Antlr4.StringTemplate.4.0.6.9004\lib\net35\Antlr4.StringTemplate.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -119,11 +115,11 @@
     <Reference Include="Telerik.Web.UI, Version=2015.1.401.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Editor\editor-control.css" />
     <Content Include="Editor\InsertAccordion\editor-control-accordion.png" />
-    <Content Include="Editor\InsertAccordion\editor-control.css" />
+    <Content Include="Editor\InsertAccordion\editor-control-accordion.css" />
     <Content Include="Editor\InsertAccordion\InsertAccordion.js" />
     <Content Include="Editor\InsertAccordion\InsertAccordion.xml" />
-    <Content Include="Editor\InsertAccordion\toolbar-button.css" />
     <Content Include="Editor\InsertAccordion\toolbar-button.js" />
     <Content Include="Editor\InsertAccordion\toolbar-button.png" />
     <Content Include="Editor\normalize.css" />
@@ -138,13 +134,11 @@
     <Compile Include="Editor\EditorComponents.cs" />
     <Compile Include="Editor\EditorConfiguration.cs" />
     <Compile Include="Editor\InsertAccordion\InsertAccordionForm.cs" />
+    <Compile Include="Editor\SitecoreHelperExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Editor.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Editor\InsertAccordion\template.st" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\sample view.cshtml" />
@@ -154,6 +148,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RichTextEditorComponents\accordion.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RichTextEditorComponents\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

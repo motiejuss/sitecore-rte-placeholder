@@ -25,22 +25,16 @@
             };
         }
 
-        jQuery(document).ready(function ($) {
-            var loadCss = function (href) {
-                var cssLink = $("<link rel='stylesheet' type='text/css' href='" + href + "'>");
-                $("head").append(cssLink);
-                $("span." + rteButtonCommand).attr("title", dialogTitle);
-            };
-            loadCss(dialogCssFile);
+        jQuery(document).ready(function ($) {            
+            var $buttonStyles = $("<style>.reTool ." + rteButtonCommand + " {background-image:url('" + pathToDialog + "toolbar-button.png') !important;}</style>");
+            $("head").append($buttonStyles);
+            $("span." + rteButtonCommand).attr("title", dialogTitle);
         });        
 
         Telerik.Web.UI.Editor.CommandList[rteButtonCommand] = function (commandName, editor, args) {
             
             var elem = editor.getSelectedElement(); //returns the selected element.
-            var range = editor.getSelection().getRange();
-            var startOffset = range != null ? range.startOffset : 0;
-            var endOffset = range != null ? range.endOffset : 0;
-            var selection = editor.getSelection().getHtml();
+            var utils = Telerik.Web.UI.Editor.Utils;
 
             var dialogCallback = function (sender, args) {                
                 var template = "";
@@ -54,7 +48,7 @@
                 }
             };            
 
-            if ((startOffset == 0 && endOffset == 0 && selection == "" && jQuery(elem).is("p")) || jQuery(elem).hasClass("editor-control-accordion")) {
+            if ((utils.isNodeEmpty(elem) && utils.emptyNodeRegExp.test(elem.innerHTML)) || jQuery(elem).hasClass("editor-control-accordion")) {
                 editor.showExternalDialog(
                     dialogLayout + "?" + jQuery.param(dialogArguments),
                     null,

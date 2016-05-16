@@ -1,0 +1,48 @@
+﻿@using Sitecore.Data.Items
+@model RenderingModel
+@functions
+{
+    public Item Item
+    {
+        get
+        {
+            return Sitecore.Context.Database.GetItem(Model.Rendering.DataSource);
+        }
+    }
+}
+
+@if (Item != null)
+{
+    <aside class="accordion">
+        <h4>
+            @Item.Fields["Headline"].Value
+        </h4>
+        <ul>
+            @for (int i = 0; i < Item.Children.Count; i++)
+            {
+                Item item = Item.Children[i];
+                string id = string.Format("{0}-{1}", item.ID.ToShortID().ToString(), i);
+                <li class="tab">
+                    @if (item.Fields["IsOpen"].Value == "1")
+                    {
+                        <input id="tab-@id" type="checkbox" class="checked" />
+                    }
+                    else
+                    {
+                        <input id="tab-@id" type="checkbox" />
+                    }
+                    <label for="tab-@id">
+                        @item.Fields["Title"]
+                    </label>
+                    <div class="tab__content">
+                        @Html.Raw(item.Fields["Text"])
+                    </div>
+                </li>
+            }
+        </ul>
+    </aside>
+}
+else
+{
+    <p style="color:red">Source Item is null</p>
+}

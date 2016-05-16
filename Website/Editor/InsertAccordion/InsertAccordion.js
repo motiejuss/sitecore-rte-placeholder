@@ -34,7 +34,7 @@ function scClose(dialogContentItemId, dialogContentItemPath) {
     getRadWindow().close(dialogInfo);
 }
 
-function scCancel() {
+function scCancel() {    
     getRadWindow().close();
 }
 

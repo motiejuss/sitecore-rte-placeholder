@@ -1,0 +1,5 @@
+﻿@model RenderingModel
+@{     
+    string ComponentName = Model.Rendering.Parameters.FirstOrDefault().Value;    
+    @Html.Sitecore().ViewRendering(String.Format("~/Views/RichTextEditorComponents/{0}.cshtml", ComponentName), new { DataSource = Model.Rendering.DataSource });
+}

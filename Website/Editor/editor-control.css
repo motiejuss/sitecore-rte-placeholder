@@ -1,4 +1,4 @@
-* {
+﻿* {
 	-webkit-transform:none;
 	transform:none;
 }
@@ -21,7 +21,4 @@
 	left:0;
 	right:0;
 	bottom:0;
-}
-.editor-control-accordion:after{		
-		background-image:url("editor-control-accordion.png");
 }

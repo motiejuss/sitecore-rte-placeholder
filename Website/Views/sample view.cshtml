@@ -2,15 +2,6 @@
 <h1 class="contentTitle">
     @Html.Sitecore().Field("Title")
 </h1>
-<div class="contentDescription">    
-    @{
-        if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
-        {   
-            @Html.Sitecore().Field("Text")
-        }
-        else
-        {
-            @Html.Raw(EditorComponents.RenderArticleBody(Sitecore.Context.Item.Fields["Text"].Value.ToString()))
-        }
-    }    
+<div class="contentDescription">
+    @Html.Sitecore().RichTextEditorField("Text", "~/Views/RichTextEditorComponents/Index.cshtml")
 </div>
